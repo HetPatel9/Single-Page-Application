@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-start;
+    border: 2px solid black;
+    position: sticky;
+    top: 0;
+    background-color: black;
+
+}
+
+nav a {
+    color: whitesmoke;
+    text-decoration-line: none;
+    /* color: black; */
+    margin-left: 30px;
+    font-size: 23px;
+}
+
+#home {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    justify-content: center;
+    border: 2px solid red;
+    margin-top: 70px;
+}
+
+#home .my-pic {
+    width: 30%;
+    border: 2px solid rgb(214, 197, 47);
+    display: flex;
+    justify-content: center;
+}
+
+.my-pic img {
+    border: 2px solid rgb(108, 214, 47);
+    width: 90%;
+}
+
+.introduction {
+    width: 70%;
+    padding: 100px;
+}
+
+.introduction h1 {
+    font-size: 40px;
+}
+
+.introduction p {
+    font-size: 20px;
+}
+
+#Myprojects {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    margin-top: 60px;
+}
+
+.project {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    margin-bottom: 30px;
+}
+
+.pr1 img {
+    width: 40%;
+}
+
+.pr2 img {
+    width: 30%;
+}
+
+.project .discription {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 200px;
+    align-items: center;
+    align-self: center;
+    border: 2px solid green;
+}
+
+.description p {
+    font-size: 22px;
+}
+
+.service-container {
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    margin: auto;
+    justify-content: center;
+    border: 2px solid yellowgreen;
+}
+html{
+    scroll-behavior: smooth;
+}
+#service {
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+    border: 2px solid rgb(213, 231, 45);
+    overflow-x: auto;
+}
+
+.servicecard {
+    min-width: 40%;
+    border: 2px solid pink;
+    margin: 5%;
+}
+
+.servicecard h1 {
+    text-align: center;
+}
+
+.service-container button {
+    align-self: center;
+    height: 100px;
+}
