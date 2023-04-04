@@ -8,7 +8,9 @@ nav {
     border: 2px solid black;
     position: sticky;
     top: 0;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
+    /* background: transparent; */
+    /* backdrop-filter: blur(1px); */
 
 }
 
@@ -54,7 +56,7 @@ nav a {
     font-size: 20px;
 }
 
-#Myprojects {
+#portfolio {
     width: 70%;
     display: flex;
     flex-direction: column;
@@ -86,10 +88,13 @@ nav a {
     align-items: center;
     align-self: center;
     border: 2px solid green;
+    padding: 30px;
+    border-radius: 20% 30%/20px ;
 }
 
 .description p {
     font-size: 22px;
+    max-width: 30%;
 }
 
 .service-container {
@@ -98,7 +103,7 @@ nav a {
     width: 60%;
     margin: auto;
     justify-content: center;
-    border: 2px solid yellowgreen;
+    /* border: 2px solid yellowgreen; */
 }
 html{
     scroll-behavior: smooth;
@@ -107,13 +112,12 @@ html{
     display: flex;
     width: 70%;
     justify-content: space-between;
-    border: 2px solid rgb(213, 231, 45);
-    overflow-x: auto;
+    /* border: 2px solid rgb(213, 231, 45); */
+    overflow-x: hidden;
 }
 
 .servicecard {
     min-width: 40%;
-    border: 2px solid pink;
     margin: 5%;
 }
 
@@ -123,5 +127,65 @@ html{
 
 .service-container button {
     align-self: center;
-    height: 100px;
+    height: 50px;
+    width: 50px;
+    font-size: 40px;
+    border: none;
+    border-radius: 10px;
+    background-color: transparent;
+}
+.service-container button:hover{
+    background-color: #cc7dcc;
+    cursor: pointer;
+}
+.about-me-header{
+    text-align: center;
+    font-size: 50px;
+}
+#about{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin: auto;
+    border: 2px solid blue;
+    justify-content: center;
+}
+.about-me-Intro{
+    width: 50%;
+    border: 2px solid rgb(106, 233, 74);
+}
+.about-me-information{
+    width: 50%;
+    border: 2px solid brown;
+    display: flex;
+    flex-direction: column;
+}
+.info-navbar{
+    display: flex;
+    width: 100%;
+    font-size: 20px;
+    background-color: black;
+    color: aliceblue;
+}
+.Education, .Skill{
+    width: 20%;
+    border: none;
+    /* background-color: transparent; */
+}
+.info-description{
+    display: flex;
+    flex-direction: row;
+}
+.Education-info{
+    width: 50%;
+}
+.Skill-info{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+.Skill-description{
+    display: flex;
+    flex-direction: row;
 }
