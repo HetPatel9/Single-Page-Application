@@ -2,40 +2,55 @@
     margin: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 nav {
     display: flex;
     justify-content: flex-start;
     border: 2px solid black;
     position: sticky;
     top: 0;
-    background-color: rgb(0, 0, 0);
+    z-index: 2;
+    background-color: rgb(121, 121, 121);
+    padding-left: 20px;
     /* background: transparent; */
     /* backdrop-filter: blur(1px); */
-
 }
 
-nav a {
+nav a{
+    width: fit-content;
     color: whitesmoke;
+    padding: 2px 7px;
     text-decoration-line: none;
-    /* color: black; */
-    margin-left: 30px;
+    text-align: center;
     font-size: 23px;
+
 }
 
-#home {
+.activeLink{
+    background-color: rgb(255, 26, 26);
+}
+#home{
     display: flex;
+    height: 100vh;
     width: 90%;
     margin: auto;
     justify-content: center;
     border: 2px solid red;
-    margin-top: 70px;
 }
 
 #home .my-pic {
-    width: 30%;
+    width: 50%;
     border: 2px solid rgb(214, 197, 47);
     display: flex;
     justify-content: center;
+}
+
+#portfolio {
+    height: 100vh;
+    width: 100%;
 }
 
 .my-pic img {
@@ -56,7 +71,13 @@ nav a {
     font-size: 20px;
 }
 
-#portfolio {
+#portfolio-title {
+    padding-top: 50px;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.portfolio {
     width: 70%;
     display: flex;
     flex-direction: column;
@@ -68,28 +89,47 @@ nav a {
 .project {
     display: flex;
     width: 100%;
-    justify-content: space-evenly;
+    justify-content: space-around;
     margin-bottom: 30px;
 }
 
-.pr1 img {
+.image1 {
     width: 40%;
+    transition: box-shadow 0.5s;
 }
 
-.pr2 img {
+.image2 {
+    order: 2;
     width: 30%;
+    transition: box-shadow 1s;
 }
 
-.project .discription {
+.image2:hover,
+.image1:hover {
+    box-shadow: 0px 0px 25px rgb(0, 0, 0);
+}
+
+.project-image:hover+.discription {
+    border-radius: 70px 30px;
+    box-shadow: 0px 0px 25px rgb(0, 0, 0);
+}
+
+.discription {
     display: flex;
     flex-direction: column;
-    width: 50%;
-    height: 200px;
+    width: 30%;
+    font-size: 1.2rem;
     align-items: center;
     align-self: center;
-    border: 2px solid green;
     padding: 30px;
-    border-radius: 20% 30%/20px ;
+    border: 2px solid rgb(0, 218, 134);
+    border-radius: 30px 70px;
+    transition: border-radius 1s;
+}
+
+.discription:hover {
+    border-radius: 70px 30px;
+    box-shadow: 0px 0px 25px rgb(0, 0, 0);
 }
 
 .description p {
@@ -102,26 +142,52 @@ nav a {
     flex-direction: row;
     width: 60%;
     margin: auto;
+    margin-bottom: 140px;
     justify-content: center;
-    /* border: 2px solid yellowgreen; */
 }
-html{
-    scroll-behavior: smooth;
+
+#Service {
+    height: 100vh;
+    width: 100%;
 }
+
+#service-title {
+    width: 100%;
+    height: 110px;
+    text-align: center;
+    padding-top: 50px;
+    font-size: 3rem;
+}
+
 #service {
     display: flex;
     width: 70%;
     justify-content: space-between;
-    /* border: 2px solid rgb(213, 231, 45); */
     overflow-x: hidden;
+    color: rgb(255, 255, 255);
+    /* background-color: rgb(92, 92, 92); */
 }
 
 .servicecard {
     min-width: 40%;
     margin: 5%;
+    font-size: 1.3rem;
+    background-color: rgb(92, 92, 92);
 }
 
-.servicecard h1 {
+.servicecard:hover {
+    box-shadow: 0px 0px 30px rgb(0, 0, 0);
+
+}
+
+.servicecard h2 {
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.servicecard p {
+    padding: 10px;
     text-align: center;
 }
 
@@ -134,58 +200,133 @@ html{
     border-radius: 10px;
     background-color: transparent;
 }
-.service-container button:hover{
-    background-color: #cc7dcc;
+
+.service-container button:hover {
+    background-color: rgb(255, 204, 94);
     cursor: pointer;
 }
-.about-me-header{
+
+.about-me {
     text-align: center;
     font-size: 50px;
+    padding: 50px;
+    /* margin-bottom: ; */
 }
-#about{
+
+#About-me {
+    height: 100vh;
+    width: 100%;
+}
+
+#about {
     display: flex;
     flex-direction: row;
-    width: 90%;
+    width: 60%;
+    height: 350px;
     margin: auto;
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
     justify-content: center;
 }
-.about-me-Intro{
+
+.about-me-Intro {
     width: 50%;
-    border: 2px solid rgb(106, 233, 74);
+    display: flex;
 }
-.about-me-information{
+
+.Intro-text {
+    width: 90%;
+    /* border: 2px solid rgb(106, 233, 74); */
+    font-size: 1.3rem;
+    padding: 20px;
+    margin: auto;
+
+}
+
+.Intro-text:hover {
+    border-radius: 30px 55px;
+}
+
+.about-me-information {
+    font-size: 1.2rem;
     width: 50%;
-    border: 2px solid brown;
+    /* border: 2px solid brown; */
     display: flex;
     flex-direction: column;
 }
-.info-navbar{
+
+.info-navbar {
     display: flex;
     width: 100%;
     font-size: 20px;
-    background-color: black;
-    color: aliceblue;
+    margin-top: 10%;
 }
-.Education, .Skill{
-    width: 20%;
+
+.Education,
+.Skill {
+    width: 25%;
     border: none;
-    /* background-color: transparent; */
+    margin-left: 6%;
+    margin-bottom: 3%;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 1.6rem;
+    transition: width 1s;
 }
-.info-description{
+
+.intermediate {
+    background-color: #cc7dcc;
+}
+
+.Education:hover,
+.Skill:hover {
+    cursor: pointer;
+}
+
+.info-description {
     display: flex;
     flex-direction: row;
+    padding-left: 10%;
 }
-.Education-info{
-    width: 50%;
+
+.Education-info {
+    width: 100%;
+    font-size: 1.4rem;
+    position: relative;
+    animation: education-info 2s;
+    animation-timing-function: ease-in-out;
 }
-.Skill-info{
-    width: 50%;
-    display: flex;
+
+@keyframes education-info {
+    from {
+        left: 200px;
+    }
+
+    to {
+        left: 0px;
+    }
+}
+
+.Skill-info {
+    width: 100%;
     flex-direction: column;
     display: none;
+    font-size: 1.4rem;
+    position: relative;
+    animation: skill-info 2s;
+    animation-timing-function: ease-in-out;
 }
-.Skill-description{
+
+@keyframes skill-info {
+    from {
+        top: 200px;
+    }
+
+    to {
+        top: 0px;
+    }
+}
+
+.Skill-description {
     display: flex;
     flex-direction: row;
 }

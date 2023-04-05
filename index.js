@@ -1,3 +1,4 @@
+// scroll efect in service card
 let container = document.getElementById('service');
 let boxLength = container.offsetWidth;
 const leftArrow = document.querySelector('.left-arrow');
@@ -17,6 +18,8 @@ rightArrow.addEventListener('click', () => {
         behavior: "smooth"
     })
 });
+
+// About me information of education and skill toggle 
 let education= document.querySelector('.Education');
 let skill= document.querySelector('.Skill');
 let eduInfo = document.querySelector('.Education-info');
@@ -28,4 +31,22 @@ education.addEventListener('click',function (){
 skill.addEventListener('click',function (){
     eduInfo.style.display='none';
     skillInfo.style.display='block';
-});
+}); 
+
+// nav bar link click event and css change
+let links = document.querySelectorAll('a');
+
+links.forEach((link)=>{
+    link.addEventListener('click',function(){
+        const linkName= document.querySelector('.activeLink');
+        if(linkName == null){
+            link.classList.add('activeLink');
+            console.log('if condition')
+        }
+        else{
+            linkName.classList.remove('activeLink');
+            console.log('else condition')
+            link.classList.add('activeLink');
+        }
+    }) 
+    });
