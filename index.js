@@ -20,33 +20,32 @@ rightArrow.addEventListener('click', () => {
 });
 
 // About me information of education and skill toggle 
-let education= document.querySelector('.Education');
-let skill= document.querySelector('.Skill');
+let education = document.querySelector('.Education');
+let skill = document.querySelector('.Skill');
 let eduInfo = document.querySelector('.Education-info');
 let skillInfo = document.querySelector('.Skill-info');
-education.addEventListener('click',function (){
-    skillInfo.style.display='none';
-    eduInfo.style.display='block';
+education.addEventListener('click', function () {
+    skillInfo.style.display = 'none';
+    eduInfo.style.display = 'block';
+  
 });
-skill.addEventListener('click',function (){
-    eduInfo.style.display='none';
-    skillInfo.style.display='block';
-}); 
+skill.addEventListener('click', function () {
+    eduInfo.style.display = 'none';
+    skillInfo.style.display = 'block';
+});
 
 // nav bar link click event and css change
 let links = document.querySelectorAll('a');
 
-links.forEach((link)=>{
-    link.addEventListener('click',function(){
-        const linkName= document.querySelector('.activeLink');
-        if(linkName == null){
+links.forEach((link) => {
+    link.addEventListener('click', function () {
+        const linkName = document.querySelector('.activeLink');
+        if (linkName == null) {
             link.classList.add('activeLink');
-            console.log('if condition')
         }
-        else{
+        else {
             linkName.classList.remove('activeLink');
-            console.log('else condition')
             link.classList.add('activeLink');
         }
-    }) 
-    });
+    })
+});

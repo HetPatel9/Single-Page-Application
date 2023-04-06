@@ -1,5 +1,6 @@
 * {
     margin: 0;
+    background-color: rgb(134, 134, 134);
 }
 
 html {
@@ -7,74 +8,85 @@ html {
 }
 
 nav {
+    width: 100%;
     display: flex;
     justify-content: flex-start;
-    border: 2px solid black;
     position: sticky;
     top: 0;
     z-index: 2;
-    background-color: rgb(121, 121, 121);
-    padding-left: 20px;
-    /* background: transparent; */
-    /* backdrop-filter: blur(1px); */
+    background-color: rgb(90, 90, 90);
 }
 
-nav a{
+nav a {
     width: fit-content;
     color: whitesmoke;
-    padding: 2px 7px;
+    padding: 2px 15px;
     text-decoration-line: none;
     text-align: center;
-    font-size: 23px;
+    font-size: 3vh;
+    background-color: rgb(90, 90, 90);
 
 }
 
-.activeLink{
-    background-color: rgb(255, 26, 26);
+.activeLink {
+    background-color: rgb(134, 134, 134);
+    color: black;
 }
-#home{
+
+#home {
     display: flex;
     height: 100vh;
     width: 90%;
     margin: auto;
     justify-content: center;
-    border: 2px solid red;
+    /* background-color: rgb(163, 163, 163); */
+    /* border: 2px solid red; */
 }
 
 #home .my-pic {
     width: 50%;
-    border: 2px solid rgb(214, 197, 47);
+    /* border: 2px solid rgb(214, 197, 47); */
     display: flex;
     justify-content: center;
 }
-
 #portfolio {
     height: 100vh;
     width: 100%;
 }
 
 .my-pic img {
-    border: 2px solid rgb(108, 214, 47);
-    width: 90%;
+    /* border: 2px solid rgb(108, 214, 47); */
+    height: 80%;
+    margin: auto;
+    border-radius: 70%;
+    background-color: rgb(90, 90, 90);
+    /* height: fit-content; */
+    /* margin: auto; */
 }
 
 .introduction {
-    width: 70%;
-    padding: 100px;
+    width: 50%;
+    padding-top: 20vh;
+    /* border: 2px solid black; */
 }
 
 .introduction h1 {
-    font-size: 40px;
+    font-size: 50px;
+    margin: 20px 0px;
+    text-align: center;
 }
 
 .introduction p {
-    font-size: 20px;
+    font-size: 25px;
+    margin-bottom: 20px;
 }
 
 #portfolio-title {
     padding-top: 50px;
-    font-size: 2.5rem;
+    font-size: 6vh;
     text-align: center;
+    width: fit-content;
+    margin: auto;
 }
 
 .portfolio {
@@ -122,7 +134,8 @@ nav a{
     align-items: center;
     align-self: center;
     padding: 30px;
-    border: 2px solid rgb(0, 218, 134);
+    background-color: rgb(190, 190, 190);
+    /* border: 2px solid rgb(0, 218, 134); */
     border-radius: 30px 70px;
     transition: border-radius 1s;
 }
@@ -132,9 +145,9 @@ nav a{
     box-shadow: 0px 0px 25px rgb(0, 0, 0);
 }
 
-.description p {
-    font-size: 22px;
-    max-width: 30%;
+.discription p,
+.discription h2 {
+    background-color: inherit;
 }
 
 .service-container {
@@ -153,10 +166,10 @@ nav a{
 
 #service-title {
     width: 100%;
-    height: 110px;
+    height: 10vh;
     text-align: center;
-    padding-top: 50px;
-    font-size: 3rem;
+    padding-top: 10vh;
+    font-size: 7vh;
 }
 
 #service {
@@ -165,14 +178,14 @@ nav a{
     justify-content: space-between;
     overflow-x: hidden;
     color: rgb(255, 255, 255);
-    /* background-color: rgb(92, 92, 92); */
+    background-color: rgb(92, 92, 92);
 }
 
 .servicecard {
     min-width: 40%;
     margin: 5%;
     font-size: 1.3rem;
-    background-color: rgb(92, 92, 92);
+    background-color: rgb(134, 134, 134);
 }
 
 .servicecard:hover {
@@ -191,26 +204,33 @@ nav a{
     text-align: center;
 }
 
+.service-container {
+    margin-top: 10vh;
+}
+
 .service-container button {
     align-self: center;
-    height: 50px;
+    height: 70px;
     width: 50px;
+    margin: 0px 10px;
     font-size: 40px;
     border: none;
     border-radius: 10px;
-    background-color: transparent;
+    background-color: rgb(105, 105, 105);
+
 }
 
 .service-container button:hover {
-    background-color: rgb(255, 204, 94);
+    background-color: rgb(88, 88, 88);
     cursor: pointer;
 }
 
 .about-me {
     text-align: center;
-    font-size: 50px;
-    padding: 50px;
-    /* margin-bottom: ; */
+    height: 13vh;
+    font-size: 6vh;
+    padding-top: 10vh;
+
 }
 
 #About-me {
@@ -236,22 +256,26 @@ nav a{
 .Intro-text {
     width: 90%;
     /* border: 2px solid rgb(106, 233, 74); */
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     padding: 20px;
     margin: auto;
-
 }
 
-.Intro-text:hover {
-    border-radius: 30px 55px;
+.Intro-text::first-letter {
+    font-size: 2rem;
 }
 
 .about-me-information {
-    font-size: 1.2rem;
     width: 50%;
     /* border: 2px solid brown; */
     display: flex;
+    background-color: rgb(175, 175, 175);
     flex-direction: column;
+}
+
+.about-me-information * {
+    background-color: rgb(175, 175, 175);
+
 }
 
 .info-navbar {
@@ -259,74 +283,152 @@ nav a{
     width: 100%;
     font-size: 20px;
     margin-top: 10%;
+    /* background-color: rgb(175, 175, 175); */
+    margin-bottom: 3%;
 }
 
 .Education,
 .Skill {
     width: 25%;
-    border: none;
-    margin-left: 6%;
-    margin-bottom: 3%;
+    padding: 0% 4%;
     text-align: center;
-    border-radius: 10px;
-    font-size: 1.6rem;
-    transition: width 1s;
+    font-size: 2rem;
+    border-bottom: 2px solid rgb(175, 175, 175);
+    transition: border 2s;
+    transition-timing-function: ease-in-out;
+    animation: strike 1s;
 }
-
-.intermediate {
-    background-color: #cc7dcc;
+@keyframes strike {
+    from{left:200px}
+    to{left:0}
 }
 
 .Education:hover,
 .Skill:hover {
+    background-color: rgb(207, 207, 207);
     cursor: pointer;
 }
 
 .info-description {
     display: flex;
     flex-direction: row;
-    padding-left: 10%;
+    padding-left: 5%;
 }
 
 .Education-info {
     width: 100%;
-    font-size: 1.4rem;
-    position: relative;
-    animation: education-info 2s;
-    animation-timing-function: ease-in-out;
+    font-size: 1.5rem;
 }
-
-@keyframes education-info {
-    from {
-        left: 200px;
-    }
-
-    to {
-        left: 0px;
-    }
+.underline{
+ width: 0%;
+ height: 3px;
+ background-color: rgb(90, 90, 90);
+ transition: width 0.6s;
 }
+.about-me-navbar-item:hover .underline{
+    width: 100%;
 
+}
 .Skill-info {
     width: 100%;
     flex-direction: column;
     display: none;
-    font-size: 1.4rem;
-    position: relative;
-    animation: skill-info 2s;
-    animation-timing-function: ease-in-out;
-}
-
-@keyframes skill-info {
-    from {
-        top: 200px;
-    }
-
-    to {
-        top: 0px;
-    }
+    font-size: 1.5rem;
 }
 
 .Skill-description {
     display: flex;
     flex-direction: row;
+}
+
+#contact {
+    height: 100vh;
+}
+.contact-title{
+    font-size: 7vh;
+    text-align: center;
+    padding-top:10vh;
+}
+.contact-media {
+    padding: 10vh;
+    display: flex;
+
+}
+
+.mycontact-detail {
+    width: 50%;
+    /* border: 2px solid red; */
+  padding: 5%;
+    font-size: 1.5rem;
+}
+
+.form {
+    width: 50%;
+
+}
+
+form {
+    /* border: 2px solid purple; */
+    width: 70%;
+    margin: auto;
+    /* margin-bottom: 32px; */
+    border-radius: 55px;
+    padding: 10%;
+    background-color: rgb(90, 90, 90);
+}
+
+form label {
+    background-color: rgb(90, 90, 90);
+    font-size: 25px;
+    display: block;
+    color: whitesmoke;
+    margin-bottom: 10px;
+}
+
+form input {
+    background-color: rgb(90, 90, 90);
+    width: 70%;
+    margin-bottom: 20px;
+    color: whitesmoke;
+    height: 35px;
+    display: block;
+    font-size: 25px;
+    border: none;
+    border-bottom: 2px solid whitesmoke;
+}
+
+form input:focus {
+    outline: none;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.mycontact-detail p {
+    margin-bottom: 2vh;
+    /* color: rgb(218, 218, 218); */
+}
+
+form [type='submit'] {
+    width: 20%;
+    height: 35px;
+    display: block;
+    margin-top: 30px;
+    /* margin-left: 15%; */
+    border: none;
+    border-radius: 15px;
+    font-size: 20px;
+    background-color: rgb(155, 155, 155);
+}
+
+.contact-links img {
+    width: 5%;
+    margin-right: 30px;
+}
+
+.contact-links img:hover{
+    transform: rotate(360deg);
+    transition-duration: 1.5s;
 }
