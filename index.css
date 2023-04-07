@@ -25,7 +25,10 @@ nav a {
     text-align: center;
     font-size: 3vh;
     background-color: rgb(90, 90, 90);
+}
 
+nav a:hover {
+    background-color: rgb(121, 121, 121);
 }
 
 .activeLink {
@@ -36,38 +39,32 @@ nav a {
 #home {
     display: flex;
     height: 100vh;
-    width: 90%;
+    width: 80%;
     margin: auto;
     justify-content: center;
-    /* background-color: rgb(163, 163, 163); */
-    /* border: 2px solid red; */
 }
 
 #home .my-pic {
     width: 50%;
-    /* border: 2px solid rgb(214, 197, 47); */
     display: flex;
     justify-content: center;
 }
+
 #portfolio {
     height: 100vh;
     width: 100%;
 }
 
 .my-pic img {
-    /* border: 2px solid rgb(108, 214, 47); */
-    height: 80%;
+    height: 65%;
     margin: auto;
     border-radius: 70%;
     background-color: rgb(90, 90, 90);
-    /* height: fit-content; */
-    /* margin: auto; */
 }
 
 .introduction {
     width: 50%;
     padding-top: 20vh;
-    /* border: 2px solid black; */
 }
 
 .introduction h1 {
@@ -76,13 +73,25 @@ nav a {
     text-align: center;
 }
 
+@media screen and (max-width: 1400px) {
+    #home {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .my-pic img {
+        height: 60%;
+    }
+}
+
 .introduction p {
     font-size: 25px;
     margin-bottom: 20px;
 }
 
 #portfolio-title {
-    padding-top: 50px;
+    padding-top: 40px;
     font-size: 6vh;
     text-align: center;
     width: fit-content;
@@ -95,7 +104,16 @@ nav a {
     flex-direction: column;
     justify-content: center;
     margin: auto;
-    margin-top: 60px;
+    margin-top: 30px;
+}
+
+@media screen and (max-width: 1600px) {
+    .portfolio {
+        width: 90%;
+    }
+    .project {
+        margin-bottom: 10px;
+    }
 }
 
 .project {
@@ -113,7 +131,7 @@ nav a {
 .image2 {
     order: 2;
     width: 30%;
-    transition: box-shadow 1s;
+    transition: box-shadow 0.5s;
 }
 
 .image2:hover,
@@ -135,7 +153,6 @@ nav a {
     align-self: center;
     padding: 30px;
     background-color: rgb(190, 190, 190);
-    /* border: 2px solid rgb(0, 218, 134); */
     border-radius: 30px 70px;
     transition: border-radius 1s;
 }
@@ -174,11 +191,24 @@ nav a {
 
 #service {
     display: flex;
-    width: 70%;
+    width: 60%;
     justify-content: space-between;
     overflow-x: hidden;
     color: rgb(255, 255, 255);
     background-color: rgb(92, 92, 92);
+    border-radius: 40px;
+}
+
+@media screen and (max-width:1550px) {
+    #service {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width:1300px) {
+    #service {
+        width: 85%;
+    }
 }
 
 .servicecard {
@@ -206,6 +236,8 @@ nav a {
 
 .service-container {
     margin-top: 10vh;
+    width: 90%;
+
 }
 
 .service-container button {
@@ -241,11 +273,16 @@ nav a {
 #about {
     display: flex;
     flex-direction: row;
-    width: 60%;
+    width: 70%;
     height: 350px;
     margin: auto;
-    /* border: 2px solid blue; */
     justify-content: center;
+}
+
+@media screen and (max-width:1300px) {
+    #about {
+        width: 85%;
+    }
 }
 
 .about-me-Intro {
@@ -255,7 +292,6 @@ nav a {
 
 .Intro-text {
     width: 90%;
-    /* border: 2px solid rgb(106, 233, 74); */
     font-size: 1.5rem;
     padding: 20px;
     margin: auto;
@@ -267,7 +303,6 @@ nav a {
 
 .about-me-information {
     width: 50%;
-    /* border: 2px solid brown; */
     display: flex;
     background-color: rgb(175, 175, 175);
     flex-direction: column;
@@ -283,8 +318,6 @@ nav a {
     width: 100%;
     font-size: 20px;
     margin-top: 10%;
-    /* background-color: rgb(175, 175, 175); */
-    margin-bottom: 3%;
 }
 
 .Education,
@@ -292,43 +325,51 @@ nav a {
     width: 25%;
     padding: 0% 4%;
     text-align: center;
-    font-size: 2rem;
-    border-bottom: 2px solid rgb(175, 175, 175);
+    font-size: 30px;
     transition: border 2s;
-    transition-timing-function: ease-in-out;
-    animation: strike 1s;
 }
-@keyframes strike {
-    from{left:200px}
-    to{left:0}
+
+.active-info {
+    background-color: rgb(80, 80, 80);
+    display: block;
+    color: whitesmoke;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 .Education:hover,
 .Skill:hover {
-    background-color: rgb(207, 207, 207);
+    background-color: rgb(141, 141, 141);
     cursor: pointer;
+    color: black;
 }
 
 .info-description {
     display: flex;
     flex-direction: row;
-    padding-left: 5%;
 }
 
 .Education-info {
     width: 100%;
     font-size: 1.5rem;
+    display: none;
 }
-.underline{
- width: 0%;
- height: 3px;
- background-color: rgb(90, 90, 90);
- transition: width 0.6s;
-}
-.about-me-navbar-item:hover .underline{
-    width: 100%;
 
+.Education-info * {
+    padding: 4px;
 }
+
+.underline {
+    width: 0%;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+    transition: width 0.6s;
+}
+
+.about-me-navbar-item:hover .underline {
+    width: 100%;
+}
+
 .Skill-info {
     width: 100%;
     flex-direction: column;
@@ -336,19 +377,43 @@ nav a {
     font-size: 1.5rem;
 }
 
+.Skill-info * {
+    padding: 3px;
+}
+
+.active-info-detail {
+    display: block;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.active-info-detail * {
+    background-color: rgb(80, 80, 80);
+    display: block;
+    color: whitesmoke;
+    padding-left: 5%;
+}
+
 .Skill-description {
     display: flex;
     flex-direction: row;
 }
 
+.Skill-description ul {
+    margin-left: 10px;
+
+}
+
 #contact {
     height: 100vh;
 }
-.contact-title{
+
+.contact-title {
     font-size: 7vh;
     text-align: center;
-    padding-top:10vh;
+    padding-top: 10vh;
 }
+
 .contact-media {
     padding: 10vh;
     display: flex;
@@ -357,21 +422,17 @@ nav a {
 
 .mycontact-detail {
     width: 50%;
-    /* border: 2px solid red; */
-  padding: 5%;
+    padding: 5%;
     font-size: 1.5rem;
 }
 
 .form {
     width: 50%;
-
 }
 
 form {
-    /* border: 2px solid purple; */
     width: 70%;
     margin: auto;
-    /* margin-bottom: 32px; */
     border-radius: 55px;
     padding: 10%;
     background-color: rgb(90, 90, 90);
@@ -408,15 +469,13 @@ input[type=number]::-webkit-inner-spin-button {
 
 .mycontact-detail p {
     margin-bottom: 2vh;
-    /* color: rgb(218, 218, 218); */
 }
 
 form [type='submit'] {
-    width: 20%;
+    width: 30%;
     height: 35px;
     display: block;
     margin-top: 30px;
-    /* margin-left: 15%; */
     border: none;
     border-radius: 15px;
     font-size: 20px;
@@ -424,11 +483,11 @@ form [type='submit'] {
 }
 
 .contact-links img {
-    width: 5%;
+    width: 40px;
     margin-right: 30px;
 }
 
-.contact-links img:hover{
+.contact-links img:hover {
     transform: rotate(360deg);
     transition-duration: 1.5s;
 }
